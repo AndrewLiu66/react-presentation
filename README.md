@@ -10,7 +10,11 @@ During the presentation, I presented two examples(the count example and the todo
 
 ## Available Scripts
 
-In the project directory, you can run:
+Before you start,you should have npm installed, and run the following script in terminal to download all the dependencies
+
+### `npm i`
+
+and then to run the react project, you can run:
 
 ### `npm start`
 
