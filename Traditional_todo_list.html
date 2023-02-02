@@ -1,0 +1,40 @@
+<div id="todo-list">
+    <h1>To-Do List</h1>
+    <ul id="todos"></ul>
+    <button id="add-todo">Add Todo</button>
+  </div>
+
+  <script>
+    const todoList = document.getElementById('todo-list');
+    const todos = document.getElementById('todos');
+    const addTodoButton = document.getElementById('add-todo');
+
+    let todoId = 1;
+    const todoData = [
+      { text: 'Learn JavaScript', id: todoId++ },
+      { text: 'Build a to-do list app', id: todoId++ },
+    ];
+
+    const renderTodos = () => {
+      todos.innerHTML = '';
+      todoData.forEach((todo) => {
+        const todoItem = document.createElement('li');
+        todoItem.innerHTML = todo.text + ' ';
+        const removeButton = document.createElement('button');
+        removeButton.innerHTML = 'Remove';
+        removeButton.addEventListener('click', () => {
+          todoData = todoData.filter((item) => item.id !== todo.id);
+          renderTodos();
+        });
+        todoItem.appendChild(removeButton);
+        todos.appendChild(todoItem);
+      });
+    };
+
+    addTodoButton.addEventListener('click', () => {
+      todoData.push({ text: 'New Todo', id: todoId++ });
+      renderTodos();
+    });
+
+    renderTodos();
+  </script>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Traditional JS</title>
+  </head>
+  <body>
+    <p>You clicked <span id="count"></span> times</p>
+    <button id="button">Click me</button>
+
+    <script>
+      let count = 0;
+      document.getElementById("count").innerHTML = count;
+
+      document.getElementById("button").addEventListener("click", function() {
+        count++;
+        document.getElementById("count").innerHTML = count;
+      });
+
+    </script>
+  </body>
+</html>

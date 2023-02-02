@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import Reuse from './component/reuseComponent'
+import RenderOnlyChange from './component/renderOnlyChange'
+import UseEffectHook from './component/useEffectHook'
+import UseProps from './component/renderProps'
+import UpdateTime from './component/updateTime'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    // for component reuse
+    // <div className="App">
+    //   <Reuse />
+    //   <Reuse />
+    //   <Reuse />
+    //   <Reuse />
+    //   <Reuse/>
+    // </div>
+
+    // for render only change
+    // <RenderOnlyChange />
+
+    // useEffectHook
+    // <UseEffectHook />
+
+    // renderProps
+    // <UseProps element="orange" />
+
+    // updateTime
+    <UpdateTime />
   );
 }
 
